@@ -9,28 +9,36 @@ In this repository, I am learning how to use Kubernetes and creating samples for
 
 ## nginx example
 
-1. Run the deployment
+1. Clone this repository
+    ```
+    git clone https://github.com/aleguerrero/Learning_Kubernetes.git
+    ```
+2. Open the folder
+    ```
+    cd Learning_Kubernetes
+    ```
+3. Run the deployment
     ```
     kubectl apply -f nginx-deployment.yaml
     ```
-2. Check that the Pod was created.
+4. Check that the Pod was created.
     ```
     kubectl get pod
     ```
-3. Create the Service
+5. Create the Service
     ```
     kubectl apply -f nginx-service.yaml
     ```
-4. Check that the Service was created.
+6. Check that the Service was created.
     ```
     kubectl get service
     ```
-5. Check that the Service is attached to the Pod. Run this command and check the IP Addresses Endpoints section.
+7. Check that the Service is attached to the Pod. Run this command and check the IP Addresses Endpoints section.
     ```
     kubectl describe service <serviceName>
     ```
-6. Check that the IP Addresses match with the Pod IP addresses.
+8. Check that the IP Addresses match with the Pod IP addresses.
     ```
     kubectl get pod --watch
     ```
-7. Congrats, you have a Service successfully attached to the Pod. :)
+9. Congrats, you have a Service successfully attached to the Pod. :)
